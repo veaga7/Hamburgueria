@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Burger House | Hambúrguer artesanal feito com calma</title>
+  <meta name="description" content="Burger House: hambúrgueres artesanais com carne moída no dia, pão assado de manhã e molho da casa. Monte seu pedido e envie pelo WhatsApp.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Burger House | Hambúrguer artesanal feito com calma">
+  <meta property="og:description" content="Carne moída no dia, pão assado de manhã e molho da casa. Veja o cardápio e monte seu pedido.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='38' fill='%23ff5233'%3EB%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Burger House, voltar ao início">
+        <span>Burger</span><small>HOUSE</small>
+      </a>
+
+      <nav class="nav" id="mainNav" aria-label="Principal">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#acompanhamentos">Acompanhamentos</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn-ghost header-cta" href="#contato">Fale conosco</a>
+
+      <button class="cart-btn" id="cartBtn" type="button" aria-label="Abrir pedido" aria-haspopup="dialog" aria-controls="drawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount" aria-hidden="true">0</span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Chapa quente desde as 18h</p>
+          <h1 id="heroTitle">Hambúrguer<br><i>artesanal de verdade</i></h1>
+          <p class="intro">Moemos a carne todo dia, assamos o pão toda manhã e fazemos o molho do zero. Sem pressa e sem atalho, do jeito que a gente gostaria de comer.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#cardapio">Peça agora</a>
+            <a class="btn btn-ghost" href="#cardapio" data-filter-link="todos">Ver cardápio</a>
+          </div>
+          <p class="hero-note"><span class="note-line" aria-hidden="true"></span>Ingredientes frescos, receita da casa</p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-ring" aria-hidden="true"></div>
+          <img class="hero-burger" id="heroBurger" width="900" height="900" fetchpriority="high"
+               src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&h=900&q=80"
+               srcset="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&h=500&q=80 500w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&h=900&q=80 900w, https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&h=1200&q=80 1200w"
+               sizes="(min-width: 900px) 520px, 90vw"
+               alt="Hambúrguer artesanal com queijo, alface e tomate">
+          <div class="floating-tag"><span class="tag-star" aria-hidden="true">✦</span><span><b>Feito à mão</b><small>sem congelados</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="benefits" aria-label="Diferenciais da casa">
+      <ul class="container benefits-list">
+        <li><b>Carne moída no dia</b><span>Corte selecionado, sem sobras do dia anterior.</span></li>
+        <li><b>Pão assado de manhã</b><span>Macio por dentro e tostado na chapa na hora.</span></li>
+        <li><b>Molho da casa</b><span>Receita própria, feita em pequenos lotes.</span></li>
+      </ul>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="section menu" id="cardapio" aria-labelledby="menuTitle">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Tudo feito na hora</p>
+            <h2 id="menuTitle">Nosso cardápio</h2>
+          </div>
+          <p class="lead">Os clássicos que não saem do cardápio e algumas ideias nossas que viraram favoritas.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar cardápio por categoria">
+          <button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="burgers" aria-pressed="false">Hambúrgueres</button>
+          <button class="filter" type="button" data-filter="combos" aria-pressed="false">Combos</button>
+          <button class="filter" type="button" data-filter="sides" aria-pressed="false">Acompanhamentos</button>
+          <button class="filter" type="button" data-filter="drinks" aria-pressed="false">Bebidas e shakes</button>
+        </div>
+        <p class="sr-only" id="filterStatus" role="status" aria-live="polite"></p>
+
+        <div class="product-grid" id="productGrid"></div>
+        <p class="menu-empty" id="menuEmpty" hidden>Nenhum item nesta categoria no momento.</p>
+        <noscript><p class="menu-empty">Ative o JavaScript no navegador para ver o cardápio e montar o pedido.</p></noscript>
+
+        <div class="menu-foot">
+          <p>Não achou o que queria? Chama a gente.</p>
+          <button class="btn btn-ghost" type="button" id="showAll">Mostrar tudo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACOMPANHAMENTOS E BEBIDAS -->
+    <section class="section feature" id="acompanhamentos" aria-labelledby="featureTitle">
+      <div class="container feature-grid">
+        <div class="feature-image reveal">
+          <img width="1000" height="750" loading="lazy"
+               src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&h=750&q=80"
+               srcset="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&h=450&q=80 600w, https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&h=750&q=80 1000w"
+               sizes="(min-width: 900px) 540px, 90vw"
+               alt="Porção de batatas fritas crocantes">
+          <div class="image-stamp" aria-hidden="true">feito com<br><i>carinho</i></div>
+        </div>
+        <div class="feature-copy">
+          <p class="eyebrow">Pra acompanhar</p>
+          <h2 id="featureTitle">A batata também merece atenção.</h2>
+          <p>Fritamos em pequenas porções para sair sempre quentinha, e os molhos são feitos aqui mesmo. Um burger bom pede um bom parceiro, de preferência gelado.</p>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="#cardapio" data-filter-link="sides">Ver acompanhamentos</a>
+            <a class="btn btn-ghost" href="#cardapio" data-filter-link="drinks">Ver bebidas e shakes</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section class="section story" id="historia" aria-labelledby="storyTitle">
+      <div class="container story-grid">
+        <div class="story-text">
+          <p class="eyebrow">Quem faz o burger</p>
+          <h2 id="storyTitle">Começou na cozinha de casa, num sábado de fome.</h2>
+          <p>A Burger House nasceu de uma pergunta simples: por que é tão difícil achar um hambúrguer feito com calma? A gente resolveu fazer o nosso, testando receitas com amigos e família até acertar o ponto.</p>
+          <p>Hoje o processo continua o mesmo: poucos ingredientes, bem escolhidos, e ninguém na equipe serve algo que não comeria.</p>
+        </div>
+        <ul class="promises reveal">
+          <li><b>Poucos ingredientes</b><span>Cada item do burger está ali por um motivo.</span></li>
+          <li><b>Receitas testadas</b><span>Ajustadas com amigos e família até chegar no ponto.</span></li>
+          <li><b>Padrão da casa</b><span>Ninguém na equipe serve algo que não comeria.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section reviews" id="depoimentos" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="reviewsTitle">Quem já provou</h2>
+          <p class="sample-note">Depoimentos de exemplo. Substitua por avaliações reais de clientes.</p>
+        </div>
+        <div class="reviews-grid">
+          <figure class="reveal"><blockquote>Fui só pela fama e acabei voltando na mesma semana. A carne vem no ponto certo.</blockquote><figcaption>Camila R., exemplo</figcaption></figure>
+          <figure class="reveal"><blockquote>Entrega rápida e o burger chegou quente. Raro de acontecer.</blockquote><figcaption>Rafael M., exemplo</figcaption></figure>
+          <figure class="reveal"><blockquote>O molho da casa é viciante. Minha filha pede toda sexta.</blockquote><figcaption>Patrícia S., exemplo</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="section cta" aria-labelledby="ctaTitle">
+      <div class="container cta-inner">
+        <h2 id="ctaTitle">Bateu a fome? A gente faz na hora.</h2>
+        <a class="btn btn-primary" href="#cardapio" data-filter-link="burgers">Escolher meu burger</a>
+      </div>
+    </section>
+
+    <!-- CONTATO, HORÁRIOS E LOCALIZAÇÃO -->
+    <section class="section contact" id="contato" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Horários e contato</p>
+          <h2 id="contactTitle">Venha ou peça.</h2>
+          <dl class="hours" id="hoursList"></dl>
+          <p class="small">*Consulte a disponibilidade de entrega na sua região.</p>
+        </div>
+        <div>
+          <ul class="contact-list" id="contactList"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter">
+    <div class="container footer-inner">
+      <a class="brand" href="#inicio" aria-label="Burger House, voltar ao início"><span>Burger</span><small>HOUSE</small></a>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#acompanhamentos">Acompanhamentos</a>
+        <a href="#historia">Nossa história</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <ul class="footer-links" id="footerLinks"></ul>
+      <p class="footer-tag">Feito com paixão. Servido com sabor.</p>
+      <p class="footer-copy">© <span id="year"></span> Burger House</p>
+    </div>
+  </footer>
+
+  <!-- PEDIDO -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 id="drawerTitle">Seu pedido</h2>
+      <button type="button" id="closeDrawer" aria-label="Fechar pedido">×</button>
+    </div>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">Seu pedido está vazio. Escolha um item no cardápio e ele aparece aqui.</p>
+    <div class="drawer-foot">
+      <label class="note-field" for="orderNote">Endereço e observações
+        <textarea id="orderNote" rows="2" maxlength="240" placeholder="Rua, número, bairro. Ex.: sem cebola."></textarea>
+      </label>
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="cartSubtotal">R$ 0,00</dd></div>
+        <div><dt>Entrega</dt><dd>a combinar</dd></div>
+        <div class="grand"><dt>Total dos itens</dt><dd id="cartTotal">R$ 0,00</dd></div>
+      </dl>
+      <button class="btn btn-primary" type="button" id="checkout" disabled>Enviar pelo WhatsApp</button>
+      <button class="link-btn" type="button" id="clearCart" disabled>Limpar pedido</button>
+      <div class="checkout-status" id="checkoutStatus" role="status" aria-live="polite"></div>
+      <small>Você revisa a mensagem no WhatsApp antes de enviar.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="toast-icon" id="toastIcon" aria-hidden="true">✓</span>
+    <div><b id="toastTitle"></b><small id="toastDetail"></small></div>
+    <button type="button" id="closeToast" aria-label="Fechar aviso">×</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
